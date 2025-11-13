@@ -7,24 +7,24 @@
     <link href="/tic-tac-toc/tic.css" rel="stylesheet">
 </head>
 <body>
-    <div id="msg-container" class="hide">
-        <p id="msg">Winner</p>
-        <button id="newbtn">New Game</button>
-    </div>
+   
+
     <main>
         <h1>Tic Tac Toc</h1>
-        <div class="players">
+
+        <div class="input">
             <div>
-            <input id="player1" type="text" placeholder="Enter Player 1 Name">
-            <input id="player1Symbol" maxlength="1" type="text" placeholder="Symbol (A-Z)">
+            <input id="player1" type="text" placeholder="Enter Player 1 Name" required>
+            <input id="player1Symbol" maxlength="1" type="text" placeholder="Symbol (A-Z)" required>
             </div>
             <div>
-            <input id="player2" type="text" placeholder="Enter Player 2 Name">
-            <input id="player2Symbol" maxlength="1" type="text" placeholder="Symbol (A-Z)"> 
+            <input id="player2" type="text" placeholder="Enter Player 2 Name" required >
+            <input id="player2Symbol" maxlength="1" type="text" placeholder="Symbol (A-Z)" required> 
             </div>  
         </div>
+        
 
-    <div class="container">
+    <div class="container " >
         <div class="game">
             <button class="box"></button>
             <button class="box"></button>
@@ -37,7 +37,11 @@
             <button class="box"></button>
         </div>
     </div>
+    <div style="display: flex;align-items: center;justify-content: center; gap: 25px;">
     <button id="reset">Reset Game</button>
+    <button id="newbtn">New Game</button>
+    </div>
+    
     </main>
     <script src="./tic.js"></script>
 </body>

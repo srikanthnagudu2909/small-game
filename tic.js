@@ -8,6 +8,7 @@ let player2Input = document.getElementById("player2");
 let player1SymbolInput = document.getElementById("player1Symbol");
 let player2SymbolInput = document.getElementById("player2Symbol");
 let turno = true;
+let input=document.getElementById("input")
 let player1Symbol = "O";
 let player2Symbol = "X";
 let symbolsChosen=false
@@ -28,7 +29,7 @@ boxes.forEach((box) => {
      if (!symbolsChosen) {
       player1Symbol = player1SymbolInput.value.toUpperCase() || "O";
       player2Symbol = player2SymbolInput.value.toUpperCase() || "X";
-
+     
       if (player1Symbol === player2Symbol) {
         alert("Players must choose different symbols!");
         player1Symbol = "O";
@@ -65,8 +66,8 @@ const showmsg = (winnerSymbol) => {
   let winnerName = (winnerSymbol === player1Symbol) 
     ? player1Input.value || "Player 1"
     : player2Input.value || "Player 2";
-  msg.innerText = `🎉 Congratulations! ${winnerName} wins with "${winnerSymbol}"`;
-  msgcontainer.classList.remove("hide");
+  
+  alert(`🎉 Congratulations! ${winnerName};`)
   disable();
 };
 
